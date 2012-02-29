@@ -13,6 +13,7 @@ This plugin allows users to create "subpanels" that can be navigated in a panel.
 We automagically wire in the scrollers for you.  If you do not want scrolling, set "scrolling='no'" on that sub panel
 
 You must lay out your HTML accordingly
+
 ```html
     <div id="mynewdiv" title="My New Div" class="panel" scrolling="no">  <!-- jqUi panel -->
         <script type="text/javascript">
