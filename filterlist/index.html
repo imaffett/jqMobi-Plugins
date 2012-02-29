@@ -1,0 +1,25 @@
+<html>
+<link rel="stylesheet" type="text/css" href="jq.filterlist.css">
+
+<script src="http://www.jqmobi.com/testdrive/jq.mobi.min.js"></script>
+<script src="jq.filterlist.js"></script>
+<script>
+$(document).ready(function(){
+$("#list").filterList({revealElements:false,perPage:3,caseInsensitive:true});
+});
+</script>
+  <body>
+    <div style='width:200px;border:1px solid black;'>
+      <ul id='list'>
+      <li><a href="#foo" data-filter="foo">One - data-filter="foo"</a></li>
+      <li><a href="#foo">Two</a></li>
+      <li><a href="#foo">Three</a></li>
+      <li><a href="#foo">Four</a></li>
+      <li><a href="#foo">Five</a></li>
+      <li><a href="#foo" data-ignore="true">Six (we ignore this one)</a></li>
+      <li>Seven</li>
+     </ul>
+   </div>
+  </body>
+
+</html>
