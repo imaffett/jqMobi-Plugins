@@ -47,7 +47,7 @@ If you are using this in jqUi, you need to trigger a resize when the panel is lo
 function resizeMap(){
     $("#maps").gmaps("resize");
 }
-```js
+```
 
 
 # Bugs
