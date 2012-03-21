@@ -29,17 +29,22 @@
         }
     });
 
-    var mapsCache = [];
+    var mapsCache = {};
 
     $.fn.gmaps = function (opts) {
         if (this.length == 0) return;
         if (!opts) return mapsCache[this[0].id];
+        if(opts=="resize"&&mapsCache[this[0].id])
+        {
+           return google.maps.event.trigger(mapsCache[this[0].id], 'resize');
+        }
         for (var i = 0; i < this.length; i++) {
             new gmaps(this[i], opts);
         }
     };
 
 
+    
     var gmaps = function (elem, opts) {
         var createMap = function () {
             if (!opts || Object.keys(opts).length == 0) {

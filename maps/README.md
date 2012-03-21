@@ -25,6 +25,31 @@ To get a google maps object that you can interact with, call the gmaps function 
 var myMap=$("#maps").gmaps();
 ```
 
+#Triggering a resize command
+
+To trigger a resize  command
+
+```js
+$("#maps").gmaps('resize');
+```
+
+#Using in jqUi
+
+If you are using this in jqUi, you need to trigger a resize when the panel is loaded.
+
+```html
+<div id="maps" title="Maps" class="panel" data-load="resizeMap">
+
+</div>
+```
+
+```js
+function resizeMap(){
+    $("#maps").gmaps("resize");
+}
+```js
+
+
 # Bugs
 
 Please use github to report any bugs found.  Please provide the following

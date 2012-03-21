@@ -7,8 +7,13 @@
 $(document).ready(function(){
 $("#maps").gmaps({zoom: 5,center: new google.maps.LatLng(40.010787, -76.278076),mapTypeId: google.maps.MapTypeId.ROADMAP});
 });
+function refresher(){
+   $("#maps").css("width","201px");
+   $("#maps").gmaps("resize");
+}
 </script>
   <body>
+    <a href="javascript:;" onclick="refresher()">Refresh map size</a>
     <div style='width:320px;height:200px;' id="maps">
      
    </div>
