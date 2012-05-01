@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  <title>Mobile Range Slider - A Touch Slider for Webkit / Mobile Safari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="jq.range.css" />
+  <script src="http://cdn.jqmobi.com/jq.mobi.min.js"></script>
+  <script>
+if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
+var script=document.createElement("script");
+script.src="http://cdn.jqmobi.com/touch.js";
+var tag=$("head").append(script);
+$.os.android=true; //let's make it run like an android device
+$.os.desktop=true;
+}
+</script>
+<body>
+
+<div style="position:absolute;top:35px;left:5px;width:25px">
+  <input type="text" id="output1" style='width:25px' /></div>
+  <div style="padding: 30px;width:200px;">
+    <div id="slider1" class="slider">
+    </div>
+  </div>
+
+
+
+  <div id="slider2" class="slider">
+
+  </div>
+
+ 
+
+  <script type="text/javascript" src="jq.range.js"></script>
+  
+  <script type="text/javascript">
+    var input1=$("#output1").get();
+    var slider1 = $('#slider1').range({
+      value: 105,
+      min: 100,
+      max: 110,
+      stepFunc: function(percentage) {
+        input1.value = percentage;
+      }
+    });
+    
+    $("#slider2").range({value:15});
+
+    $("#output1").bind("change",function(e){$("#slider1").range().val(this.value)});
+  </script>
+
+</body>
+</html>
