@@ -1,0 +1,32 @@
+<html>
+<script src="http://cdn.jqmobi.com/jq.mobi.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jq.noticeWindow.css" />
+
+
+<script src="jq.noticeWindow.js"></script>
+
+<script type="text/javascript">
+function showNotice(){
+ $(document.body).noticeWindow({
+       title:'Notifications', //string
+       content:'This is a sample', //string of thml
+       arrowLeft:'middle' //left,middle,right or pixels from the left
+   });
+}
+
+function downNotice(){
+ $(document.body).noticeWindow({
+       title:'Notifications', //string
+       content:'This is a sample', //string of thml
+       arrowLeft:'middle', //left,middle,right or pixels from the left
+       arrowDirection:"down"
+   });
+}
+</script>
+
+<body style="margin:0px;overflow:hidden">
+
+<a href="javascript:;" onclick="showNotice()">Middle Arrow</a> | <a href="javascript:;" onclick="downNotice()">Bottom Arrow</a>
+
+</body>
+</html>
