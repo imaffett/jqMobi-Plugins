@@ -75,6 +75,7 @@
             closer.hide();
         });
         input.bind("keyup", function() {
+            that.currentPage=0;
             that.filterData(this.value)
         }).bind("focus", function() {
             closer.show();
