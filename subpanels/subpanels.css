@@ -2,7 +2,6 @@
         -webkit-backface-visibility: hidden;
         z-index:1;
         width:100%;
-        height:100%;
         display:none;
         position:absolute; top:0px; left:0px;
         overflow:hidden;
@@ -12,14 +11,14 @@
         margin-top:10px;
         margin-bottom:10px;
         -webkit-transition-duration:300ms;
-    }
+}
     
 .subpanelNav a {
-display:inline-block;
-text-decoration:none;
-color:white;
+        display:inline-block;
+        text-decoration:none;
+        color:white;
 }
 
 .jqmScrollbar{
-z-index:200;
+        z-index:200;
 }
