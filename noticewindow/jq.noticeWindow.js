@@ -61,6 +61,7 @@
         _contentDiv:null,
         _scroller:null,
         show:function(){
+            
             this.container.append('<div id="noticeWindow" class="noticeWindow" style="'+this.containerCss+'"><div class="noticeArrow '+this.arrowDirection+'" style="left:'+this.arrowLeft+'"></div><div class="noticeTitle">'+this.title+'</div><div class="noticeContent" id="noticeContent">'+this.content+'</div></div>');
             this.mask=$('<div id="noticeMask" style="width:100%;height:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:transparent;z-index:9998"/>');
             if(this.mask.__proto__["scroller"])
@@ -74,6 +75,7 @@
                     refresh: false
                 });
                 this._contentDiv=this.container.find("#noticeContent").children().get(0);
+                this.container.find("#noticeWindow").css("overflow","");
             }
             else
                 this._contentDiv=this.container.find("#noticeContent");
@@ -107,7 +109,7 @@
         },
         destroy:function(){
             if(this._scroller)
-                this._scroller.removeEvents();
+                this._scroller.disable();
             create=true;
             this.container.find("#noticeWindow").remove();
             this.mask.remove();

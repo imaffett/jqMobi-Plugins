@@ -1,14 +1,14 @@
 .noticeWindow {
     width:270px;
     padding:5px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-left:auto;
+    margin-right:auto;
     height:280px;
     background:blue;
     border:5px;
     border-radius:5px;
     top:60px;
-    position:absolute;	
+    position:relative;	
     z-index:9999;
 }
 .noticeTitle{
