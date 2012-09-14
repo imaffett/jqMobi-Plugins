@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html>
+<meta charset=utf-8>
+<!-- Minimal tags and chars used --> 
+<title>jq.pathmenu.com</title>
+<meta name=viewport content="width=device-width, initial-scale=1.0,max-scale=1">
+<script src="http://cdn.jqmobi.com/1.1/jq.ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jq.pathmenu.css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.jqmobi.com/1.1/jq.ui.css"/>
+
+<script src="jq.pathmenu.js"></script>
+<script>
+  $(document).ready(function(){
+	$("#pathmenu").pathmenu({button:"{!}"})
+});
+  $.ui.ready(function(){
+  	console.log("called");
+  })
+
+</script>
+<style>
+#navbar {display:none !important;}
+#content {bottom:0px !important;}
+</style>
+<body>
+	<div id="jQUi">
+		<div id="header"></div>
+		<div id="content">
+			<div id="main" title="main" selected="true" class="panel">Main</div>
+			<div id="one" title="1"  class="panel">
+				<div>
+adipiscing elit. Duis porta, lorem sit amet feugiat lacinia, mi dui
+				sodales eros, id lacinia mauris urna eu est. Proin pulvinar, augue
+				sed convallis elementum, magna diam pharetra magna, id vestibulum est
+				eros vitae ante. Ut auctor erat a tellus venenatis eu fermentum lorem
+				scelerisque. Cras dignissim leo ornare massa sollicitudin sit amet
+				pulvinar turpis hendrerit. Morbi hendrerit nunc eget turpis luctus id
+				ultricies lorem consequat. Donec eu lacus sed mauris sollicitudin
+				laoreet. Cras vitae sodales diam. Donec mollis, libero ut
+				pellentesque dignissim, risus orci ornare nisi, sed eleifend enim
+				purus malesuada neque. Nulla tellus sem, scelerisque sed sagittis id,
+				eleifend venenatis ligula. Vivamus placerat neque sit amet metus
+				ultricies facilisis. Nulla a odio magna. Pellentesque habitant morbi
+				tristique senectus et netus et malesuada fames ac turpis egestas. Sed
+				commodo quam eu enim lacinia vitae ultrices nulla mollis. Aenean eget
+				lectus turpis, at ultrices leo. Nulla vehicula magna in risus ornare
+				vestibulum. Integer gravida magna quam. Donec augue ante, fringilla
+				non congue eu, aliquam lacinia nisi. Class aptent taciti sociosqu ad
+				litora torquent per conubia nostra, per inceptos himenaeos. Maecenas
+				nisl ante, suscipit ut suscipit nec, dictum sit amet orci. Maecenas
+				fermentum sapien turpis, sit amet eleifend justo. Aenean auctor
+				interdum sem sed tincidunt. Aliquam ullamcorper malesuada fermentum.
+				Nunc consectetur, ipsum et pulvinar ultrices, lorem nibh egestas
+				sapien, at egestas lorem metus sit amet lacus. Maecenas non feugiat
+				orci. Curabitur imperdiet tempus lacus, volutpat fermentum diam
+				convallis a. In hac habitasse platea dictumst. Pellentesque nec ipsum
+				diam, at consectetur elit. Duis feugiat ullamcorper libero tincidunt
+				aliquet. Sed leo nisl, iaculis non pellentesque nec, scelerisque vel
+				felis</div>
+				<div>Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Duis porta, lorem sit amet feugiat lacinia, mi dui
+				sodales eros, id lacinia mauris urna eu est. Proin pulvinar, augue
+				sed convallis elementum, magna diam pharetra magna, id vestibulum est
+				eros vitae ante. Ut auctor erat a tellus venenatis eu fermentum lorem
+				scelerisque. Cras dignissim leo ornare massa sollicitudin sit amet
+				pulvinar turpis hendrerit. Morbi hendrerit nunc eget turpis luctus id
+				ultricies lorem consequat. Donec eu lacus sed mauris sollicitudin
+				laoreet. Cras vitae sodales diam. Donec mollis, libero ut
+				pellentesque dignissim, risus orci ornare nisi, sed eleifend enim
+				purus malesuada neque. Nulla tellus sem, scelerisque sed sagittis id,
+				eleifend venenatis ligula. Vivamus placerat neque sit amet metus
+				ultricies facilisis. Nulla a odio magna. Pellentesque habitant morbi
+				tristique senectus et netus et malesuada fames ac turpis egestas. Sed
+				commodo quam eu enim lacinia vitae ultrices nulla mollis. Aenean eget
+				lectus turpis, at ultrices leo. Nulla vehicula magna in risus ornare
+				vestibulum. Integer gravida magna quam. Donec augue ante, fringilla
+				non congue eu, aliquam lacinia nisi. Class aptent taciti sociosqu ad
+				litora torquent per conubia nostra, per inceptos himenaeos. Maecenas
+				nisl ante, suscipit ut suscipit nec, dictum sit amet orci. Maecenas
+				fermentum sapien turpis, sit amet eleifend justo. Aenean auctor
+				interdum sem sed tincidunt. Aliquam ullamcorper malesuada fermentum.
+				Nunc consectetur, ipsum et pulvinar ultrices, lorem nibh egestas
+				sapien, at egestas lorem metus sit amet lacus. Maecenas non feugiat
+				orci. Curabitur imperdiet tempus lacus, volutpat fermentum diam
+				convallis a. In hac habitasse platea dictumst. Pellentesque nec ipsum
+				diam, at consectetur elit. Duis feugiat ullamcorper libero tincidunt
+				aliquet. Sed leo nisl, iaculis non pellentesque nec, scelerisque vel
+				felis</div>
+			</div>
+			<div id="tweet" title="tweet"  class="panel">Main</div>
+			<div id="email" title="email"  class="panel">Main</div>
+		</div>
+		<div id="navbar" style='display:none'></div>
+  		<ul id='pathmenu' style='z-index:999'>
+  			<li><a href='#main'>Like</a></li>
+  			<li><a href='#one'>+1</a></li>
+  			<li><a href='#tweet'>Tweet</a></li>
+  			<li><a href='#email'>Email</a></li>
+  			<li><a href='#'>&hearts;</a></li>
+  		</ul>
+	</div>
+	
+
+</body></html>

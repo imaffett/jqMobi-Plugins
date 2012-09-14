@@ -1,0 +1,128 @@
+.pathcircle{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  list-style-type:none;
+  height: 45px;
+  width: 45px;
+}
+
+.pathcircle li {
+  display:inline;
+}
+
+
+.pathmenubutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  height: 45px;
+  width: 45px;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+  padding: 0;
+}
+
+.pathmenubutton div a{
+  height: 45px;
+  display: block;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+.pathmenubutton.open div a{
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+.pathmenubutton div{
+  height: 45px;
+  width: 45px;
+  background: #db3a2b; 
+  background: -webkit-linear-gradient(top,  #db3a2b 0%,#cf0404 100%); 
+  background: linear-gradient(top,  #db3a2b 0%,#cf0404 100%);
+  border-radius: 45px;
+  border: 1px solid #cf0404;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.pathbtn{
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  border-radius: 25px;
+  top: 6px;
+  left: 6px;
+  background: #fff;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+}
+
+.pathbtn.open{
+  transition: all 350ms;
+  -webkit-transition: all 350ms;
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.400, 1.650); 
+  transition-timing-function: cubic-bezier(0.250, 0.250, 0.400, 1.650);
+}
+
+.pathbtn{
+  margin: 3px;
+  width: 35px;
+  height: 35px;
+  background: #222;
+  border-radius: 20px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.pathbtn a {
+  text-decoration: none;
+  color:#fff;
+  display:block;
+  border:none;
+  font-size:12px;
+  line-height:35px;
+  padding:0px;
+  margin:0px;
+}
+
+.pathbtn:nth-child(1).open{
+  -webkit-transform:translate3d(0px,-120px,0);
+}
+
+.pathbtn:nth-child(2).open{
+  -webkit-transform:translate3d(40px,-100px,0);
+  -webkit-transition-delay:30ms:
+}
+
+.pathbtn:nth-child(3).open{
+  -webkit-transform:translate3d(80px,-75px,0);
+  -webkit-transition-delay:60ms;
+}
+
+.pathbtn:nth-child(4).open{
+
+  -webkit-transform:translate3d(110px,-40px,0);
+  -webkit-transition-delay:90ms;
+}
+
+.pathbtn:nth-child(5).open{
+  -webkit-transform:translate3d(130px,0px,0);
+  -webkit-transition-delay:120ms;
+}
+
+.pathbtn a::after {
+  content:none;
+
+}
