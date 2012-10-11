@@ -1,4 +1,5 @@
-# subpanel plugin for jqUi
+# Subpanel plugin for jqUi
+###Author: Ian Maffett (appMobi)
 
 This plugin allows users to create "subpanels" that can be navigated in a panel.
 

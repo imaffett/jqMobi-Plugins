@@ -4,12 +4,10 @@
         width:100%;
         display:none;
         position:absolute; top:0px; left:0px;
+		min-height:100%;
         overflow:hidden;
         background:inherit;
-        -webkit-transform:translate3d(-100%,0,0);
         -webkit-perspective: 1000;
-        margin-top:10px;
-        margin-bottom:10px;
         -webkit-transition-duration:300ms;
 }
     
