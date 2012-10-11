@@ -47,29 +47,29 @@
 
   var subpanel = function(item) {
       this.container = $(item);
-
       //let's delegate the clicks to handle routing
       var self = this;
+      this.container.css("overflow",$.feat.nativeTouchScroll?"auto":"hidden");
       this.container.parent().find(".subpanelNav").on("click", "a", function(e) {
         self.loadNewDiv($(this.hash).get(), $(this).data("transition"), false);
         e.preventDefault();
       });
-      this.container.css("overflow", "hidden");
       this.container.parent().find(".subpanelNav a").data("ignore", "true"); //Set data ignore so the main click handler doesn't process it
       this.container.find("div.insetPanel").forEach(function(obj) {
         if ($(obj).attr("scrolling") == "no") return;
-        console.log("Adding a scroller ");
+        
         scrollers[obj.id] = $(obj).scroller({
           scrollBars: true,
           verticalScroll: true,
           vScrollCSS: "jqmScrollbar",
-          useJsScroll: !$.feat.nativeTouchScroll
+          useJsScroll: !$.feat.nativeTouchScroll,
+          autoEnable:false,
+          noParent:true
         });
-        scrollers[obj.id].disable();
       });
       this.loadCurrent();
       this.container.bind("destroy", function() {
-        this.container.find("div").forEach(function(obj) {
+        this.container.find("div.insetPanel").forEach(function(obj) {
           if ($(obj).attr("scrolling") == "no") return;
           scrollers[obj.id].disable();
           delete scrollers[obj.id];
@@ -81,7 +81,7 @@
           var el = that.history.pop();
           that.loadNewDiv(el.old, el.trans, true, el.new);
         }
-      })
+      });
     };
 
   subpanel.prototype = {
@@ -89,13 +89,18 @@
     currentDiv: null,
     history: [],
     loadCurrent: function() {
+      try{
       var div = this.container.find(".default");
-      div.css("-webkit-transform", "translate3d(0,0,0)");
+      div.css("-webkit-transform", "none");
       div.show();
       this.currentDiv = div.get();
       if (scrollers[this.currentDiv.id]) scrollers[this.currentDiv.id].enable();
+      }
+      catch(e){console.log ("error with load current "+e.message);}
+
     },
     loadNewDiv: function(newDiv, trans, back, prevDiv) {
+       try{
       if (newDiv == this.currentDiv) return;
       back = back || false;
       var oldDiv = prevDiv || this.currentDiv;
@@ -110,6 +115,8 @@
         'new': newDiv,
         'trans': trans
       });
+      }
+        catch(e){console.log ("error with load current "+e.message);}
     }
 
   };
