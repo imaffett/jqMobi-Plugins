@@ -10,6 +10,11 @@
         -webkit-perspective: 1000;
         -webkit-transition-duration:300ms;
 }
+
+.insetPanel > * {
+-webkit-backface-visibility: hidden;
+-webkit-perspective: 1000;
+}
     
 .subpanelNav a {
         display:inline-block;
